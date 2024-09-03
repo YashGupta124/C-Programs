@@ -1,0 +1,20 @@
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        if(x<0){
+            return false;
+        }
+        long ans = 0;
+        long copy = x;
+        while(copy>0){
+            int dig = copy % 10;
+            ans = ans * 10 + dig;
+            copy = copy / 10;
+            
+        }
+        if(x == ans)
+        return true;
+        else
+        return false;
+    }
+};
